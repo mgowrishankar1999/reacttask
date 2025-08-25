@@ -7,6 +7,8 @@ import Verificationicon from "../assets/verification.png";
 import Qricon from "../assets/qr.png";
 
 import Iconright from "../assets/icongreenright.png"
+import Speaker from "../assets/speaker.png"
+import Pos from "../assets/posmachine.png"
 
 
 
@@ -103,17 +105,32 @@ const Profile = () => {
 
 
                     </div>
-                    <div className="flex justify-between mt-[40px]">
+                    <div className="flex justify-between mt-[40px] ">
 
-                        <div className="w-[292px] ps-[32px]">
+                        <div className="w-[490px] h-[200px] ps-[32px] pt-[24px] border border-[#EEEEEE]">
                             <p className="text-[#999999] font-semibold text-[14px]">Business Services</p>
-                            <div className='my-[24px] '>
+                            <div className="flex ">
+                                <div className="w-[96px] me-[14px] h-[120px]">
 
+                                    <div className=' my-[16px] w-[80px] bg-gray-200 h-[80px] flex items-center justify-center '>
+                                        <img className="h-[44px] w-[44px]" src={Speaker} alt="speaker" />
+
+                                    </div>
+                                    <div className="text-[14px] leading-tight text-center font-medium text-[#252525]">Smart <br></br>Speaker</div>
+                                </div>
+                                <div className="w-[96px] h-[120px]">
+
+                                    <div className=' my-[16px] w-[80px] bg-gray-200 h-[80px] flex items-center justify-center '>
+                                        <img className="h-[44px] w-[44px]" src={Pos} alt="speaker" />
+
+                                    </div>
+                                    <div className="text-[14px] font-medium text-[#252525] text-center leading-tight">Smart <br></br>Speaker</div>
+                                </div>
                             </div>
 
                         </div>
-                        <div className="w-[292px]  ps-[32px]">
-                            <div className='my-[24px]'>
+                        <div className="w-[490px] h-[200px]  ps-[32px]">
+                            <div className='my-[24px]  w-[96px] h-[120px] flex'>
 
                             </div>
 
