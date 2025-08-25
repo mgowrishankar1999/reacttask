@@ -323,7 +323,7 @@ const ActiveQrcode = () => {
                                     )}
                                 </div>
                             </div>
-                            <button className="w-full h-[56px] mb-[32px] bg-[#42794A] text-[20px] font-medium text-white rounded-[12px]">
+                            <button className="w-full h-[56px] mb-[10px] bg-[#42794A] text-[20px] font-medium text-white rounded-[12px]">
                                 Request more QR Codes
                             </button>
                         </div>

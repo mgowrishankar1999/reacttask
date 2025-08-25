@@ -43,7 +43,11 @@ const Sidebar = () => {
                                     <span>History</span>
                                 </div>
                             </li>
-                            <li className="py-4 hover:bg-white cursor-pointer h-[56px] ps-[20px] font-medium text-[#94CA9C] text-[14px] rounded-[12px]">
+                            <li
+                                onClick={() => navigate('/profile')}
+
+                                className={`py-4 cursor-pointer h-[56px] ps-[20px] font-medium text-[#94CA9C] text-[14px] rounded-[12px] ${location.pathname === "/profile" ? "bg-white" : "hover:bg-white"
+                                    }`}>
                                 <div className="flex">
                                     <img className="h-6 w-6 me-2" src={Profileicon} alt="Profile" />
                                     <span>Profile</span>

@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './components/home';
 import ActiveQrcode from './components/activeQrcode';
+import Profile from './components/profile'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,6 +16,7 @@ function App() {
       <>
         <Route path="/" element={<Home />} />
         <Route path="/active-qrcode" element={<ActiveQrcode />} />
+        <Route path="/profile" element={<Profile />} />
 
       </>
     )
