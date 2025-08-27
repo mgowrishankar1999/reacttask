@@ -3,6 +3,7 @@ import Home from './components/home';
 import ActiveQrcode from './components/activeQrcode';
 import Profile from './components/profile'
 import History from './components/history';
+import Popup from './components/popup';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,6 +20,8 @@ function App() {
         <Route path="/active-qrcode" element={<ActiveQrcode />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/history" element={<History />} />
+        <Route path="/popup" element={<Popup />} />
+
 
       </>
     )

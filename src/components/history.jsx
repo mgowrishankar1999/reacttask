@@ -253,12 +253,22 @@ import Searchicon from "../assets/searchicon.png";
 import Settlementicon from "../assets/settlementicon.png";
 import Historyicon from "../assets/history.png";
 import axios from "axios";
+import Popup from "./popup";
 
 const History = () => {
     const [transactions, setTransactions] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     useEffect(() => {
         const fetchTransactions = async () => {
@@ -291,6 +301,10 @@ const History = () => {
     );
 
     console.log(transactions)
+
+    const modelHandler = () => {
+        setIsModalOpen(true)
+    }
 
     return (
         <>
@@ -328,7 +342,9 @@ const History = () => {
                                 </span>
                                 Tomorrow.
                             </p>
-                            <button className="flex items-center justify-center w-[221px] h-[56px] me-[24px] rounded-[8px] bg-[#42794A] text-white font-medium text-[20px]">
+                            <button className="flex items-center justify-center w-[221px] h-[56px] me-[24px] rounded-[8px] bg-[#42794A] text-white font-medium text-[20px]"
+                                onClick ={ modelHandler}
+                            >
                                 <img src={Settlementicon} alt="Settlement Icon" className="mr-2" />
                                 <span>Settle Now!</span>
                             </button>
@@ -418,6 +434,7 @@ const History = () => {
                     </div>
                 </div>
             </div>
+            <Popup isOpen={isModalOpen} onClose={closeModal} />
         </>
     );
 };
