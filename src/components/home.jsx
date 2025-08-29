@@ -407,122 +407,147 @@ import Billpayment from '../assets/billpayment.png';
 import Profilecircle from '../assets/profilecircle.png';
 import Qrcode from '../assets/qrcode.png';
 import Iconright from '../assets/iconright.png';
+import Mobilewallet from '../assets/mobilewalleticon.png';
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-gray-50">
-            <Navbar />
-            <div className="flex flex-col md:flex-row  ">
-                <div className='w-[30%]'>
 
-                    <Sidebar />
-                </div>
-                <div className=" mt-4  w-[70%] me-20 mb-10">
-                    {/* 1st Section */}
-                    <div
-                        className="w-full border-2 border-[#61CE70] rounded-lg flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 overflow-hidden"
-                        style={{
-                            background: 'linear-gradient(120deg, rgba(66, 121, 74, 1) 0%, rgba(97, 206, 112, 1) 60%, #ffffff 40%)',
-                            color: '#ffffff',
-                            clipPath: 'polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%)',
-                        }}
-                    >
-                        <div className="mb-4 md:mb-0 md:pr-4">
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">Pay ₹1/month* for the QPay POS Device</h1>
-                            <p className="text-sm sm:text-base mt-2">One device for accepting all modes of payments</p>
-                            <button className="mt-4 px-4 py-2 bg-white text-[#42794A] text-sm rounded-lg font-semibold hover:bg-gray-100">
-                                Download App Now!
-                            </button>
-                        </div>
-                        <img src={Billpayment} alt="QPay POS Device Illustration" className="h-32 md:h-40 lg:h-48 w-auto" />
+        <>
+
+            <div className="min-h-screen bg-gray-50 hidden md:block ">
+                <Navbar />
+                <div className="hidden  md:flex  ">
+                    <div className='w-[30%]'>
+
+                        <Sidebar />
                     </div>
-                    {/* 2nd Section */}
-                    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {[
-                            { value: '1.5K', label: 'Account Holders' },
-                            { value: '2.1K', label: 'Transactions' },
-                            { value: '2.3K', label: 'Settlement' },
-                            { value: '45K', label: 'QR Orders' },
-                        ].map((item, index) => (
-                            <div key={index} className="border border-gray-200 rounded-lg flex flex-col items-center justify-center p-4">
-                                <p className="font-bold text-2xl sm:text-3xl text-[#42794A]">{item.value}</p>
-                                <p className="text-base sm:text-lg font-medium text-gray-500">{item.label}</p>
-                            </div>
-                        ))}
-                    </div>
-                    {/* 3rd Section */}
-                    <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        {[
-                            {
-                                title: 'PROFILE',
-                                img: Profilecircle,
-                                subtitle: 'Complete your profile',
-                                items: ['Personal KYC', 'Company KYC', 'Onboarding details'],
-                                button: 'Next',
-                            },
-                            {
-                                title: 'QR',
-                                img: Qrcode,
-                                subtitle: 'Order QR',
-                                items: ['Receive Payment', 'Order new QRs', 'Download QR'],
-                                button: 'View more',
-                            },
-                        ].map((section, index) => (
-                            <div key={index} className="border border-gray-200 rounded-lg p-6">
-                                <p className="text-sm font-semibold text-gray-500">{section.title}</p>
-                                <div className="flex flex-col sm:flex-row items-center mt-4">
-                                    <img src={section.img} alt={section.title} className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded" />
-                                    <div className="mt-4 sm:mt-0 sm:ml-6">
-                                        <p className="text-lg font-semibold text-gray-800">{section.subtitle}</p>
-                                        <ul className="list-disc list-inside text-gray-500 mt-2 text-sm">
-                                            {section.items.map((item, i) => (
-                                                <li key={i}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="border-t border-gray-200 my-4"></div>
-                                <button className="w-full h-12 bg-[#42794A] text-white text-base font-medium rounded-lg">
-                                    {section.button}
+                    <div className=" mt-4  w-[70%] me-20 mb-10">
+                        {/* 1st Section */}
+                        <div
+                            className="w-full border-2 border-[#61CE70] rounded-lg flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 overflow-hidden"
+                            style={{
+                                background: 'linear-gradient(120deg, rgba(66, 121, 74, 1) 0%, rgba(97, 206, 112, 1) 60%, #ffffff 40%)',
+                                color: '#ffffff',
+                                clipPath: 'polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%)',
+                            }}
+                        >
+                            <div className="mb-4 md:mb-0 md:pr-4">
+                                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">Pay ₹1/month* for the QPay POS Device</h1>
+                                <p className="text-sm sm:text-base mt-2">One device for accepting all modes of payments</p>
+                                <button className="mt-4 px-4 py-2 bg-white text-[#42794A] text-sm rounded-lg font-semibold hover:bg-gray-100">
+                                    Download App Now!
                                 </button>
                             </div>
-                        ))}
-                    </div>
-                    {/* 4th Section */}
-                    <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        {[
-                            { title: 'SETTLEMENT', amount: '1,23,816.19' },
-                            { title: 'TOTAL TRANSACTIONS', amount: '1,23,816.19' },
-                        ].map((section, index) => (
-                            <div key={index} className="border border-gray-200 rounded-lg p-4">
-                                <div className="flex justify-between items-center">
-                                    <div>
-                                        <p className="text-sm font-semibold text-gray-500">{section.title}</p>
-                                        <p className="mt-2 text-lg font-semibold text-gray-800">{section.amount}</p>
-                                    </div>
-                                    <img src={Iconright} alt="Right Icon" className="h-5 w-5" />
+                            <img src={Billpayment} alt="QPay POS Device Illustration" className="h-32 md:h-40 lg:h-48 w-auto" />
+                        </div>
+                        {/* 2nd Section */}
+                        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {[
+                                { value: '1.5K', label: 'Account Holders' },
+                                { value: '2.1K', label: 'Transactions' },
+                                { value: '2.3K', label: 'Settlement' },
+                                { value: '45K', label: 'QR Orders' },
+                            ].map((item, index) => (
+                                <div key={index} className="border border-gray-200 rounded-lg flex flex-col items-center justify-center p-4">
+                                    <p className="font-bold text-2xl sm:text-3xl text-[#42794A]">{item.value}</p>
+                                    <p className="text-base sm:text-lg font-medium text-gray-500">{item.label}</p>
                                 </div>
-                                <div className="border-t border-gray-200 my-4"></div>
-                                <div className="space-y-3">
-                                    {['Gowri', 'Henry', 'Raju'].map((name, i) => (
-                                        <div key={i} className="flex justify-between items-center">
-                                            <div>
-                                                <p className="text-base font-semibold text-gray-800">{name}</p>
-                                                <p className="text-base text-gray-500">{section.amount}</p>
-                                            </div>
-                                            <p className="text-base font-semibold text-gray-800">+₹90</p>
+                            ))}
+                        </div>
+                        {/* 3rd Section */}
+                        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                            {[
+                                {
+                                    title: 'PROFILE',
+                                    img: Profilecircle,
+                                    subtitle: 'Complete your profile',
+                                    items: ['Personal KYC', 'Company KYC', 'Onboarding details'],
+                                    button: 'Next',
+                                },
+                                {
+                                    title: 'QR',
+                                    img: Qrcode,
+                                    subtitle: 'Order QR',
+                                    items: ['Receive Payment', 'Order new QRs', 'Download QR'],
+                                    button: 'View more',
+                                },
+                            ].map((section, index) => (
+                                <div key={index} className="border border-gray-200 rounded-lg p-6">
+                                    <p className="text-sm font-semibold text-gray-500">{section.title}</p>
+                                    <div className="flex flex-col sm:flex-row items-center mt-4">
+                                        <img src={section.img} alt={section.title} className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded" />
+                                        <div className="mt-4 sm:mt-0 sm:ml-6">
+                                            <p className="text-lg font-semibold text-gray-800">{section.subtitle}</p>
+                                            <ul className="list-disc list-inside text-gray-500 mt-2 text-sm">
+                                                {section.items.map((item, i) => (
+                                                    <li key={i}>{item}</li>
+                                                ))}
+                                            </ul>
                                         </div>
-                                    ))}
+                                    </div>
+                                    <div className="border-t border-gray-200 my-4"></div>
                                     <button className="w-full h-12 bg-[#42794A] text-white text-base font-medium rounded-lg">
-                                        {section.title === 'SETTLEMENT' ? 'Settle Now' : 'View All'}
+                                        {section.button}
                                     </button>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+                        {/* 4th Section */}
+                        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                            {[
+                                { title: 'SETTLEMENT', amount: '1,23,816.19' },
+                                { title: 'TOTAL TRANSACTIONS', amount: '1,23,816.19' },
+                            ].map((section, index) => (
+                                <div key={index} className="border border-gray-200 rounded-lg p-4">
+                                    <div className="flex justify-between items-center">
+                                        <div>
+                                            <p className="text-sm font-semibold text-gray-500">{section.title}</p>
+                                            <p className="mt-2 text-lg font-semibold text-gray-800">{section.amount}</p>
+                                        </div>
+                                        <img src={Iconright} alt="Right Icon" className="h-5 w-5" />
+                                    </div>
+                                    <div className="border-t border-gray-200 my-4"></div>
+                                    <div className="space-y-3">
+                                        {['Gowri', 'Henry', 'Raju'].map((name, i) => (
+                                            <div key={i} className="flex justify-between items-center">
+                                                <div>
+                                                    <p className="text-base font-semibold text-gray-800">{name}</p>
+                                                    <p className="text-base text-gray-500">{section.amount}</p>
+                                                </div>
+                                                <p className="text-base font-semibold text-gray-800">+₹90</p>
+                                            </div>
+                                        ))}
+                                        <button className="w-full h-12 bg-[#42794A] text-white text-base font-medium rounded-lg">
+                                            {section.title === 'SETTLEMENT' ? 'Settle Now' : 'View All'}
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+
+            {/* mobile */}
+
+            <Navbar />
+            <div className='md:hidden m-[16px] min-h-[206px] bg-gradient-to-b from-[#61CE70] to-[#42794A] rounded-[16px]'>
+
+
+                <div className='min-h-[52px] border-b border-white'>
+                    <button className='w-[140px] h-[52px] border-r flex items-center'>
+                        <img className='w-6 h-6' src={Mobilewallet} alt="Mobile Wallet" />
+                        <div className='ms-2'>
+                            <p className='text-[10px] text-white font-medium '>Qpay wallet</p>
+                            <p className='pt-[2px] font-bold text-[12px] text-white'>₹2,36,000.47</p>
+                        </div>
+                    </button>
+                    <button className='w-[140px] border-r'></button>
+                </div>
+
+            </div>
+        </>
     );
 };
 

@@ -84,7 +84,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <aside className=" md:h-[828px] bg-[#42794A] border border-[#42794A] rounded-lg mt-4 mx-4 md:mx-6 lg:ms-20 flex flex-col">
+    <aside className="hidden md:h-[828px] bg-[#42794A] border border-[#42794A] rounded-lg mt-4 mx-4 md:mx-6 lg:ms-20 md:flex flex-col">
       <div className="flex-grow p-4">
         <ul className="space-y-2">
           {[
