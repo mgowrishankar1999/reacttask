@@ -427,7 +427,14 @@ import Creditcard from "../assets/creditcard.png";
 import Mobileelectricity from "../assets/mobileelectricity.png";
 import Mobileiconphone from "../assets/mobileiconphone.png";
 import Gas from "../assets/gas.svg";
+import Image1 from "../assets/img1.png"
+import Image2 from "../assets/img2.png"
+import Image3 from "../assets/img3.png"
+import Image4 from "../assets/img4.png"
+import Image5 from "../assets/img5.png"
+import Image6 from "../assets/img6.png"
 
+import Footer from "../components/MobileFooter"
 
 const Home = () => {
     return (
@@ -551,7 +558,7 @@ const Home = () => {
 
             {/* ------------------------mobile --version code ---------------*/}
 
-            <div className='md:hidden bg-[#DDDDDD] py-3 '>
+            <div className='md:hidden bg-[#DDDDDD] pt-3 '>
                 <Navbar />
                 <div className=' m-[16px] h-[206px] bg-gradient-to-b from-[#61CE70] to-[#42794A] rounded-[16px]'>
                     <div className='h-[52px] border-b border-white flex'>
@@ -668,6 +675,38 @@ const Home = () => {
 
                     </div>
                 </div>
+
+                <div className='m-[16px] h-[104px] border border-gray-300 rounded-[10px]'>
+
+                    <p className='pt-[12px] ps-[12px] pb-[8px] text-[#999999] text-[12px] font-semibold'> Recent Transactions</p>
+                    <div className='flex justify-between'>
+                        <div className='flex flex-col'>
+                            <img className='h-10 w-10' src={Image1} alt="Image1" />
+                            <p className='text-[#2525252] text-[12px] font-medium '>Itachi</p>
+                        </div>
+                        <div className='flex flex-col'>
+                            <img className='h-10 w-10' src={Image2} alt="Image2" />
+                            <p className='text-[#2525252] text-[12px] font-medium '>Madara</p>
+                        </div>
+                        <div className='flex flex-col'>
+                            <img className='h-10 w-10' src={Image3} alt="Image3" />
+                            <p className='text-[#2525252] text-[12px] font-medium '>Hinata</p>
+                        </div>
+                        <div className='flex flex-col'>
+                            <img className='h-10 w-10' src={Image4} alt="Image4" />
+                            <p className='text-[#2525252] text-[12px] font-medium '>Naruto</p>
+                        </div>
+                        <div className='flex flex-col'>
+                            <img className='h-10 w-10' src={Image5} alt="Image5" />
+                            <p className='text-[#2525252] text-[12px] font-medium '>Obito</p>
+                        </div>
+                        <div className='flex flex-col'>
+                            <img className='h-10 w-10' src={Image6} alt="Image6" />
+                            <p className='text-[#2525252] text-[12px] font-medium '>Sakura</p>
+                        </div>
+                    </div>
+                </div>
+                <Footer />
             </div>
         </>
     );
