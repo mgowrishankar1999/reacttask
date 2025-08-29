@@ -407,7 +407,27 @@ import Billpayment from '../assets/billpayment.png';
 import Profilecircle from '../assets/profilecircle.png';
 import Qrcode from '../assets/qrcode.png';
 import Iconright from '../assets/iconright.png';
+
+// mobile imports
 import Mobilewallet from '../assets/mobilewalleticon.png';
+import Bankmobile from '../assets/mobilebankicon.png'
+import Linkicon from '../assets/linkicon.png'
+import Newicon from '../assets/newicon.png'
+import Flighticon from "../assets/flighticon.png";
+import Busicon from "../assets/busicon.png";
+import Trainicon from "../assets/trainicon.png";
+import Hotelicon from "../assets/hotelicon.png";
+import Qrmobileicon from "../assets/qrmobileicon.png";
+import Copymobileicon from "../assets/copyicon.png";
+import Sharemobileicon from "../assets/shareiconmobile.png";
+import Optionsmobileicon from "../assets/optionsicon.png";
+import Moreicon from "../assets/moreiconmobile.png";
+import Dth from "../assets/dth.png";
+import Creditcard from "../assets/creditcard.png";
+import Mobileelectricity from "../assets/mobileelectricity.png";
+import Mobileiconphone from "../assets/mobileiconphone.png";
+import Gas from "../assets/gas.svg";
+
 
 const Home = () => {
     return (
@@ -529,23 +549,125 @@ const Home = () => {
             </div>
 
 
-            {/* mobile */}
+            {/* ------------------------mobile --version code ---------------*/}
 
-            <Navbar />
-            <div className='md:hidden m-[16px] min-h-[206px] bg-gradient-to-b from-[#61CE70] to-[#42794A] rounded-[16px]'>
+            <div className='md:hidden bg-[#DDDDDD] py-3 '>
+                <Navbar />
+                <div className=' m-[16px] h-[206px] bg-gradient-to-b from-[#61CE70] to-[#42794A] rounded-[16px]'>
+                    <div className='h-[52px] border-b border-white flex'>
+                        <button className='w-[140px] h-[52px] border-r flex items-center'>
+                            <img className=' ps-[16px] ' src={Mobilewallet} alt="Mobile Wallet" />
+                            <div className='ms-2'>
+                                <p className='text-[10px] text-white font-medium '>Qpay wallet</p>
+                                <p className='pt-[2px] font-bold text-[12px] text-white'>₹2,36,000.47</p>
+                            </div>
+                        </button>
+                        <button className='w-[140px] h-[52px] border-r flex items-center'>
+                            <img className=' ps-[16px] ' src={Bankmobile} alt="Mobile Wallet" />
+                            <div className='ms-2'>
+                                <p className='text-[10px] text-white font-medium '>Bank 1</p>
+                                <p className='pt-[2px] font-bold text-[12px] text-white'>₹0.00</p>
+                            </div>
+                        </button>
 
+                    </div>
+                    <div className=' flex flex-col h-[154px] justify-center items-center  '>
+                        <button className='h-[26px] w-[144px] flex justify-center items-center space-x-1 h-[26px] border rounded-[20px]' >
+                            <img src={Linkicon} alt='linkicon' />
+                            <p className='text-white text-[12px] font-medium'>Linck Account</p>
+                        </button>
+                        <button className='h-[26px] w-[144px] bg-[#FFFFFF] mt-[8px] flex justify-center items-center space-x-1 h-[26px] border rounded-[20px]' >
+                            <img src={Newicon} alt='Newicon' />
+                            <p className='text-[#42794A] text-[12px] font-medium'>New Account</p>
+                        </button>
+                    </div>
 
-                <div className='min-h-[52px] border-b border-white'>
-                    <button className='w-[140px] h-[52px] border-r flex items-center'>
-                        <img className='w-6 h-6' src={Mobilewallet} alt="Mobile Wallet" />
-                        <div className='ms-2'>
-                            <p className='text-[10px] text-white font-medium '>Qpay wallet</p>
-                            <p className='pt-[2px] font-bold text-[12px] text-white'>₹2,36,000.47</p>
+                </div>
+                <div className='min-h-[124px] rounded-[16px] m-[16px]  border border-gray-300'>
+                    <p className='text-[12px] text-[#999999] font-semibold ps-[16px] pt-[16px] pb-2'>Ticket Booking</p>
+                    <div className='flex h-[70px] justify-center items-center space-x-4'>
+                        <div className='h-[70px] w-[62px] flex flex-col  items-center  '>
+                            <img className='w-[48px] h-[48px]' src={Flighticon} alt='flighticon' />
+                            <p className='font-medium text-[12px] text-[#252525]'>Flight</p>
                         </div>
-                    </button>
-                    <button className='w-[140px] border-r'></button>
+                        <div className='max-h-[70px] w-[62px] flex flex-col  items-center  '>
+                            <img className='w-[48px] h-[48px]' src={Busicon} alt='busicon' />
+                            <p className='font-medium text-[12px] text-[#252525]'>Bus</p>
+                        </div>
+                        <div className='h-[70px] w-[62px] flex flex-col  items-center '>
+                            <img className='w-[48px] h-[48px]' src={Trainicon} alt='trainicon' />
+                            <p className='font-medium text-[12px] text-[#252525]'>Train</p>
+                        </div>
+                        <div className='h-[70px] w-[62px] flex flex-col  items-center '>
+                            <img className='w-[48px] h-[48px]' src={Hotelicon} alt='hotelicon' />
+                            <p className='font-medium text-[12px] text-[#252525]'>Hotels</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
+
+                <div className='m-[16px] bg-[#FFFFFF] rounded-[10px] h-[106px]'>
+                    <div className='min-h-[74px] flex flex-col justify-between h-full'>
+                        <div className='h-[32px] px-4 pt-4 pb-11 '>
+                            <p className='text-[12px] font-medium text-[#999999]'>Receive money</p>
+                            <p className='text-[252525] font-bold text-[14px]'>UPI ID: 9876543210@qpay</p>
+                        </div>
+                        <div className='pt-3 pb-[16px] ps-4 pe-[18px]  flex justify-between items-center min-h-[30px] '>
+
+                            <div className='flex whitespace-nowrap min-w-[80px] h-[30px] bg-[#EEEEEE] rounded-[40px] items-center justify-center ' >
+                                <img className='h-[14px] w-[14px]' src={Qrmobileicon} alt='Qrcode' />
+                                <p className='text-[#252525] ps-[4px] text-[12px] font-medium'>QR code </p>
+                            </div>
+                            <div className='flex whitespace-nowrap min-w-[80px] h-[30px] bg-[#EEEEEE] rounded-[40px] items-center justify-center ' >
+                                <img className='h-[14px] w-[14px]' src={Copymobileicon} alt='copy' />
+                                <p className='text-[#252525] ps-[4px] text-[12px] font-medium'>Copy </p>
+                            </div>
+                            <div className='flex whitespace-nowrap min-w-[80px] h-[30px] bg-[#EEEEEE] rounded-[40px] items-center justify-center ' >
+                                <img className='h-[14px] w-[14px]' src={Sharemobileicon} alt='share' />
+                                <p className='text-[#252525] ps-[4px] text-[12px] font-medium'>Share </p>
+                            </div>
+                            <div>
+
+                                <img className='h-[30px] w-[30px]' src={Optionsmobileicon} alt='options' />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div className="m-[16px] min-h-[226px] border border-gray-300 rounded-[10px]">
+                    <p className="mx-4 mt-4 text-[#999999] font-semibold text-[12px]">Bill Payments</p>
+                    <div className="min-h-[172px] grid grid-cols-2 gap-4 p-[16px] ">
+                        <div className="flex items-center space-x-4  h-[52px] rounded p-2 bg-[#FFFFFF] rounded-[12px]">
+                            <img className='h-6 w-6' src={Mobileiconphone} alt='Recharge' />
+                            <p className='ml-[16px] font-medium text-[12px] text-[#252525]'> Mobile <br></br>Recharge</p>
+                        </div>
+                        <div className="flex items-center space-x-4  h-[52px] rounded p-2 bg-[#FFFFFF] rounded-[12px]">
+                            <img className='h-6 w-6' src={Mobileelectricity} alt='Payment' />
+                            <p className='ml-[16px] font-medium text-[12px] text-[#252525]'> Electricity <br></br>Payment</p>
+                        </div>
+                        <div className="flex items-center space-x-4  h-[52px] rounded p-2 bg-[#FFFFFF] rounded-[12px]">
+                            <img className='h-6 w-6' src={Creditcard} alt='Credit Card ' />
+                            <p className='ml-[16px] font-medium text-[12px] text-[#252525] '> Credit Card <br></br>Bill</p>
+                        </div>
+                        <div className="flex items-center space-x-4  h-[52px] rounded p-2 bg-[#FFFFFF] rounded-[12px]">
+                            <img className='h-6 w-6' src={Dth} alt='DTH' />
+                            <p className='ml-[16px] font-medium text-[12px] text-[#252525]'> DTH / Cable Tv</p>
+                        </div>
+                        <div className="flex items-center space-x-4  h-[52px] rounded p-2 bg-[#FFFFFF] rounded-[12px]">
+                            <img className='h-6 w-6' src={Gas} alt='Gas' />
+                            <p className='ml-[16px] font-medium text-[12px] text-[#252525]'> Gas <br></br>Cylinder</p>
+                        </div>
+                        <div className="flex items-center space-x-4  h-[52px] leading-ti2ht rounded p-2 bg-[#FFFFFF] rounded-[12px]">
+                            <img className='h-6 w-6' src={Moreicon} alt='Moreicon' />
+                            <p className='ml-[16px] font-medium text-[12px] text-[#252525]'> More <br></br>Payments</p>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
         </>
     );

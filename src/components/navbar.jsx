@@ -53,8 +53,8 @@ const Navbar = () => {
         </div>
       </nav>
 
-
-      <nav className="md:hidden  m-4  max-h-[40px]  flex justify-between items-center ">
+      {/* mobile version */}
+      <nav className="md:hidden  pt-4 mb-4 px-4 max-h-[40px]  flex justify-between items-center ">
         <img src={UserLogo} alt="UserLogo" className="h-10 w-10 " />
         <div className="flex flex-col grow ps-[8px]">
           <p className="text-[14px] font-semibold  text-[#999999]">Hello</p>
