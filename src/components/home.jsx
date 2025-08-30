@@ -561,7 +561,7 @@ const Home = () => {
             <div className='md:hidden bg-[#DDDDDD] pt-3 '>
                 <Navbar />
                 <div className=' m-[16px] h-[206px] bg-gradient-to-b from-[#61CE70] to-[#42794A] rounded-[16px]'>
-                    <div className='h-[52px] border-b border-white flex'>
+                    <div className=' h-[52px] border-b border-white flex'>
                         <button className='w-[140px] h-[52px] border-r flex items-center'>
                             <img className=' ps-[16px] ' src={Mobilewallet} alt="Mobile Wallet" />
                             <div className='ms-2'>
@@ -679,29 +679,29 @@ const Home = () => {
                 <div className='m-[16px] h-[104px] border border-gray-300 rounded-[10px]'>
 
                     <p className='pt-[12px] ps-[12px] pb-[8px] text-[#999999] text-[12px] font-semibold'> Recent Transactions</p>
-                    <div className='flex justify-between'>
-                        <div className='flex flex-col'>
-                            <img className='h-10 w-10' src={Image1} alt="Image1" />
+                    <div className='flex justify-between ps-[12px]'>
+                        <div className='flex flex-col items-center'>
+                            <img className='' src={Image1} alt="Image1" />
                             <p className='text-[#2525252] text-[12px] font-medium '>Itachi</p>
                         </div>
-                        <div className='flex flex-col'>
-                            <img className='h-10 w-10' src={Image2} alt="Image2" />
+                        <div className='flex flex-col items-center'>
+                            <img className='' src={Image2} alt="Image2" />
                             <p className='text-[#2525252] text-[12px] font-medium '>Madara</p>
                         </div>
-                        <div className='flex flex-col'>
-                            <img className='h-10 w-10' src={Image3} alt="Image3" />
+                        <div className='flex flex-col items-center'>
+                            <img className='' src={Image3} alt="Image3" />
                             <p className='text-[#2525252] text-[12px] font-medium '>Hinata</p>
                         </div>
-                        <div className='flex flex-col'>
-                            <img className='h-10 w-10' src={Image4} alt="Image4" />
+                        <div className='flex flex-col items-center'>
+                            <img className='' src={Image4} alt="Image4" />
                             <p className='text-[#2525252] text-[12px] font-medium '>Naruto</p>
                         </div>
-                        <div className='flex flex-col'>
-                            <img className='h-10 w-10' src={Image5} alt="Image5" />
+                        <div className='flex flex-col items-center'>
+                            <img className='' src={Image5} alt="Image5" />
                             <p className='text-[#2525252] text-[12px] font-medium '>Obito</p>
                         </div>
-                        <div className='flex flex-col'>
-                            <img className='h-10 w-10' src={Image6} alt="Image6" />
+                        <div className='flex flex-col items-center'>
+                            <img className='' src={Image6} alt="Image6" />
                             <p className='text-[#2525252] text-[12px] font-medium '>Sakura</p>
                         </div>
                     </div>
