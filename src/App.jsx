@@ -12,7 +12,8 @@ import {
 } from "react-router-dom";
 
 // mobileimport 
-import Mobilebank from "./components/bankmobile"
+import MobileProfile from "./components/Mobileprofile"
+import MobileBank from "./components/mobilebank"
 
 function App() {
   // Create the router configuration
@@ -26,7 +27,8 @@ function App() {
         <Route path="/popup" element={<Popup />} />
 
         {/* mobile routes */}
-        <Route path="/bank" element={<Mobilebank />} />
+        <Route path="/bank" element={<MobileProfile />} />
+        <Route path="/banks" element={<MobileBank />} />
 
 
       </>

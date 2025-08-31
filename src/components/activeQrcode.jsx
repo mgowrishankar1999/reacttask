@@ -614,7 +614,7 @@ const ActiveQrcode = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="hidden md:flex flex-col min-h-screen bg-gray-50">
             <Navbar />
             <div className="flex flex-col md:flex-row">
                 <div className="w-[30%]">
