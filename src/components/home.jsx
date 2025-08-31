@@ -434,13 +434,67 @@ import Image4 from "../assets/img4.png"
 import Image5 from "../assets/img5.png"
 import Image6 from "../assets/img6.png"
 
+import Sbi from "../assets/sbilogomobile.png"
+import Baroda from "../assets/barodalogomobile.png"
+import Statementmobile from "../assets/statementiconmobile.png"
+import Transfermobile from "../assets/transfericonmobile.png"
+import Eyeon from "../assets/eyeon.png"
+import Eyeoff from "../assets/eyeoff.png"
+
 import Footer from "../components/MobileFooter"
+import { useState, useRef } from 'react';
 
 const Home = () => {
+    const [banks, setBanks] = useState([
+        { name: 'QPay Wallet', balance: '₹2,36,000.47', icon: Mobilewallet },
+        { name: 'Bank 1', balance: '₹2,36,000.47', icon: Sbi, accountNumber: 'XXXXXXX46536', ifsc: 'KKBK0008798' },
+        { name: 'Bank 2', balance: '₹2,36,000.47', icon: Baroda, accountNumber: 'XXXXXXX46536', ifsc: 'KKBK0008798' },
+        { name: 'Bank 3', balance: '₹2,36,000.47', icon: Bankmobile, accountNumber: 'XXXXXXX46536', ifsc: 'KKBK0008798' },
+    ]);
+    const [selectedBankIndex, setSelectedBankIndex] = useState(null);
+
+    const scrollRef = useRef(null);
+
+    const addBank = () => {
+        const newBankNumber = banks.length - 1;
+        const newBank = {
+            name: `Bank ${newBankNumber + 1}`,
+            balance: '₹0.00',
+            icon: Bankmobile,
+            accountNumber: 'XXXXXXX46536',
+            ifsc: 'KKBK0008798',
+        };
+        setBanks([...banks, newBank]);
+        setTimeout(() => {
+            if (scrollRef.current) {
+                const scrollContainer = scrollRef.current;
+                const lastBankIndex = banks.length;
+                const bankWidth = 140;
+                scrollContainer.scrollTo({
+                    left: lastBankIndex * bankWidth - 140,
+                    behavior: 'smooth',
+                });
+            }
+        }, 0);
+    };
+
+    const handleBankClick = (index) => {
+        setSelectedBankIndex(index === selectedBankIndex ? null : index);
+        if (scrollRef.current) {
+            const scrollContainer = scrollRef.current;
+            const bankWidth = 140;
+            const containerWidth = scrollContainer.clientWidth;
+            const scrollPosition = index * bankWidth - (containerWidth - bankWidth) / 2;
+            scrollContainer.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth',
+            });
+        }
+    };
+
+
     return (
-
         <>
-
             <div className="min-h-screen bg-gray-50 hidden md:block ">
                 <Navbar />
                 <div className="hidden  md:flex  ">
@@ -560,35 +614,131 @@ const Home = () => {
 
             <div className='md:hidden bg-[#DDDDDD] pt-3 '>
                 <Navbar />
-                <div className=' m-[16px] h-[206px] bg-gradient-to-b from-[#61CE70] to-[#42794A] rounded-[16px]'>
-                    <div className=' h-[52px] border-b border-white flex'>
-                        <button className='w-[140px] h-[52px] border-r flex items-center'>
-                            <img className=' ps-[16px] ' src={Mobilewallet} alt="Mobile Wallet" />
-                            <div className='ms-2'>
-                                <p className='text-[10px] text-white font-medium '>Qpay wallet</p>
-                                <p className='pt-[2px] font-bold text-[12px] text-white'>₹2,36,000.47</p>
-                            </div>
-                        </button>
-                        <button className='w-[140px] h-[52px] border-r flex items-center'>
-                            <img className=' ps-[16px] ' src={Bankmobile} alt="Mobile Wallet" />
-                            <div className='ms-2'>
-                                <p className='text-[10px] text-white font-medium '>Bank 1</p>
-                                <p className='pt-[2px] font-bold text-[12px] text-white'>₹0.00</p>
-                            </div>
-                        </button>
-
+                <div
+                    style={{ background: 'radial-gradient(circle, #61CE70, #42794A)' }}
+                    className="m-[16px] h-[206px] rounded-[16px]"
+                >
+                    <div className="h-[52px] border-b border-white flex overflow-x-auto scrollbar-hidden" ref={scrollRef}>
+                        {banks.map((bank, index) => (
+                            <button
+                                key={index}
+                                className={`w-[140px] h-[52px] border-r flex items-center flex-shrink-0 ${selectedBankIndex === index ? 'bg-[#42794A]' : ''
+                                    }`}
+                                onClick={() => handleBankClick(index)}
+                            >
+                                <img className="ps-[16px]" src={bank.icon} alt={bank.name} />
+                                <div className="ms-2">
+                                    <p className="text-[10px] text-white font-medium">{bank.name}</p>
+                                    <p className="pt-[2px] font-bold text-[12px] text-white">{bank.balance}</p>
+                                </div>
+                            </button>
+                        ))}
                     </div>
-                    <div className=' flex flex-col h-[154px] justify-center items-center  '>
-                        <button className='h-[26px] w-[144px] flex justify-center items-center space-x-1 h-[26px] border rounded-[20px]' >
-                            <img src={Linkicon} alt='linkicon' />
-                            <p className='text-white text-[12px] font-medium'>Linck Account</p>
-                        </button>
-                        <button className='h-[26px] w-[144px] bg-[#FFFFFF] mt-[8px] flex justify-center items-center space-x-1 h-[26px] border rounded-[20px]' >
-                            <img src={Newicon} alt='Newicon' />
-                            <p className='text-[#42794A] text-[12px] font-medium'>New Account</p>
-                        </button>
-                    </div>
+                    <div className="flex flex-col h-[154px] justify-center items-center">
+                        {selectedBankIndex === null ? (
+                            <>
+                                <button
+                                    className="h-[26px] w-[144px] flex justify-center items-center space-x-1 border rounded-[20px]"
+                                    onClick={addBank}
+                                >
+                                    <img src={Linkicon} alt="linkicon" />
+                                    <p className="text-white text-[12px] font-medium">Link Account</p>
+                                </button>
+                                <button className="h-[26px] w-[144px] bg-[#FFFFFF] mt-[8px] flex justify-center items-center space-x-1 border rounded-[20px]">
+                                    <img src={Newicon} alt="Newicon" />
+                                    <p className="text-[#42794A] text-[12px] font-medium">New Account</p>
+                                </button>
+                            </>
+                        ) : (
+                            <div className="w-full flex flex-col items-center px-4">
 
+
+                                {banks[selectedBankIndex].name == 'QPay Wallet' && (
+                                    <>
+
+                                        <p className="text-[12px] text-white font-medium mb-[2px]">Account balance</p>
+                                        <div className='flex items-center justify-center'>
+                                            <p className="text-[20px] text-white font-bold  me-[8px] "> ₹ {banks[selectedBankIndex].balance}</p>
+                                            <img className='h-4 w-4' src={Eyeoff} />
+
+                                        </div>
+
+                                        <div className="flex space-x-4 mt-4">
+                                            <button className="h-[26px] w-[144px]  border border-[#FFFFFF] text-[#FFFFFF] rounded-[20px] flex items-center justify-center space-x-2">
+                                                <span className="text-[20px]">+</span>
+                                                <p className="text-[12px] font-medium">Add money</p>
+                                            </button>
+                                            <button className="h-[26px] w-[144px] bg-white border border-[#42794A] text-[#42794A] rounded-[20px] flex items-center justify-center space-x-2">
+                                                {/* <span className="text-[20px]">↔</span> */}
+                                                <img className='h-4 w-4' src={Transfermobile} />
+
+                                                <p className="text-[12px] font-medium">Transfer</p>
+                                            </button>
+                                        </div>
+                                    </>
+                                )}
+                                {banks[selectedBankIndex].name !== 'QPay Wallet' && (
+                                    <>
+                                        {/* <div className="flex items-center justify-between mb-2">
+                                            <img src={banks[selectedBankIndex].icon} alt={banks[selectedBankIndex].name} className="h-6 w-6" />
+                                            <p className="text-[14px] font-semibold text-[#252525]">{banks[selectedBankIndex].name}</p>
+                                        </div>
+                                        <p className="text-[12px] text-[#999999] mb-1">Account number</p>
+                                        <p className="text-[14px] font-medium text-[#252525] mb-2">{banks[selectedBankIndex].accountNumber}</p>
+                                        <p className="text-[12px] text-[#999999] mb-1">IFSC Code</p>
+                                        <p className="text-[14px] font-medium text-[#252525] mb-4">{banks[selectedBankIndex].ifsc}</p> */}
+
+                                        <div className='w-[296px] h-[80px] flex  flex-col justify-between items-between'>
+                                            <div className='flex justify-between '>
+                                                <div className='flex flex-col'>
+                                                    <p className='text-[#FFFFFF] text-[10px] font-medium '>Account number </p>
+                                                    <div className='flex text-[#FFFFFF] font-bold text-[12px] '>
+                                                        <p>{banks[selectedBankIndex].accountNumber}</p>
+                                                        <img className='ps-[8px] object-cover' src={Eyeon} />
+                                                    </div>
+                                                </div>
+                                                <div className='flex flex-col'>
+                                                    <p className='text-[#FFFFFF] text-[10px] font-medium '>Bank </p>
+                                                    <div className='flex text-[#FFFFFF] font-bold text-[12px] '>
+                                                        <p>{banks[selectedBankIndex].name}</p>
+                                                        {/* <img className='ps-[8px] object-cover' src={Eyeon} /> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='flex justify-between'>
+                                                <div className='flex flex-col'>
+                                                    <p className='text-[#FFFFFF] text-[10px] font-medium '>IFSC Code </p>
+                                                    <div className='flex text-[#FFFFFF] font-bold text-[12px] '>
+                                                        <p>{banks[selectedBankIndex].ifsc}</p>
+                                                        {/* <img className='ps-[8px] object-cover' src={Eyeon} /> */}
+                                                    </div>
+                                                </div>
+                                                <div className='flex flex-col'>
+                                                    <p className='text-[#FFFFFF] text-[10px] font-medium '>Account balance </p>
+                                                    <div className='flex text-[#FFFFFF] font-bold text-[12px] '>
+                                                        <p>₹ {banks[selectedBankIndex].balance}</p>
+                                                        <img className='ps-[8px] ' src={Eyeoff} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* this is button section  */}
+                                        <div className="flex space-x-4 pt-[16px]">
+                                            <button className="h-[26px] w-[144px]  border border-[#FFFFFF]  rounded-[20px] flex items-center justify-center space-x-2">
+                                                <img src={Statementmobile} alt="Statement" />
+                                                <p className="text-[12px] text-[#FFFFFF] font-medium">Statement</p>
+                                            </button>
+                                            <button className="h-[26px] w-[144px] bg-white border border-[#42794A] text-[#42794A] rounded-[20px] flex items-center justify-center space-x-2">
+                                                <img src={Transfermobile} alt="Transfer" />
+                                                <p className="text-[12px] font-medium">Transfer</p>
+                                            </button>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <div className='min-h-[124px] rounded-[16px] m-[16px]  border border-gray-300'>
                     <p className='text-[12px] text-[#999999] font-semibold ps-[16px] pt-[16px] pb-2'>Ticket Booking</p>
@@ -636,13 +786,10 @@ const Home = () => {
                                 <p className='text-[#252525] ps-[4px] text-[12px] font-medium'>Share </p>
                             </div>
                             <div>
-
                                 <img className='h-[30px] w-[30px]' src={Optionsmobileicon} alt='options' />
                             </div>
                         </div>
-
                     </div>
-
                 </div>
                 <div className="m-[16px] min-h-[226px] border border-gray-300 rounded-[10px]">
                     <p className="mx-4 mt-4 text-[#999999] font-semibold text-[12px]">Bill Payments</p>
