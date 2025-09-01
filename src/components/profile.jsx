@@ -216,7 +216,7 @@ const Profile = () => {
 
             {/* mobile version */}
 
-            <div className="md:hidden">
+            <div className="md:hidden mb-[82px]">
 
                 <div className="  mt-[26px] mx-4 mb-4 h-[96px] shadow-sm shadow-gray-300 rounded-[16px]">
                     <div className="h-full flex items-center h-[64px]  p-[16px] ">

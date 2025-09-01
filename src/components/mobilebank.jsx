@@ -12,7 +12,7 @@ const MobileBank = () => {
 
     return (
         <>
-            <div className="md:hidden">
+            <div className="md:hidden mb-[82px]">
                 <div className="h-[22px]"></div>
                 <div className="h-[72px] w-full">
                     <div className="w-1/2 flex justify-between items-center m-4">

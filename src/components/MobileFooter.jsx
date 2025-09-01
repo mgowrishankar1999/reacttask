@@ -117,7 +117,7 @@ const Footer = () => {
             label: "Bank",
         },
         {
-            path: "/",
+            path: "",
             name: "history",
             defaultIcon: Mobilehistory,
             activeIcon: Mobilehistory,
@@ -133,8 +133,8 @@ const Footer = () => {
     ];
 
     return (
-        <div className="h-[80px] bg-[#42794A]">
-            <div className="flex justify-around items-center h-full w-full">
+        <div className="h-[82px]     bg-[#42794A] fixed bottom-0 w-full">
+            <div className="flex justify-around items-center h-full ">
                 {navItems.map((item) => {
                     const isActive = location.pathname === item.path;
                     return (

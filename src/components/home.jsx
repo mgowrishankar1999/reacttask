@@ -612,7 +612,7 @@ const Home = () => {
 
             {/* ------------------------mobile --version code ---------------*/}
 
-            <div className='md:hidden bg-[#DDDDDD] pt-3 '>
+            <div className='md:hidden bg-[#DDDDDD] pt-3 mb-[82px] '>
                 <Navbar />
                 <div
                     style={{ background: 'radial-gradient(circle, #61CE70, #42794A)' }}
