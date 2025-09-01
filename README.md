@@ -15,5 +15,9 @@ npm version : 11.4.2,
 
 how to start application --------
 
-step1 -->    npm install vite@latest
-step2 -->    npm run dev
+
+
+
+step1 -->    npm install or  npm install --force
+step2 -->    npm install vite@latest
+step3 -->    npm run dev
