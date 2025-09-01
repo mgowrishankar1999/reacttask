@@ -793,7 +793,7 @@ const History = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-gray-50">
+            <div className="hidden md:block min-h-screen bg-gray-50">
                 <Navbar />
                 <div className="flex flex-col md:flex-row">
                     <div className="w-[30%]">
@@ -894,10 +894,10 @@ const History = () => {
                                                 <td className="p-4">
                                                     <span
                                                         className={`w-24 text-center inline-block px-2 py-1 text-[20px] border rounded-[4px] ${transaction.status === "PENDING"
-                                                                ? "border-[#EDB823] text-[#EDB823]"
-                                                                : transaction.status === "SUCCESS"
-                                                                    ? "border-[#61CE70] text-[#61CE70]"
-                                                                    : "border-[#E87474] text-[#E87474]"
+                                                            ? "border-[#EDB823] text-[#EDB823]"
+                                                            : transaction.status === "SUCCESS"
+                                                                ? "border-[#61CE70] text-[#61CE70]"
+                                                                : "border-[#E87474] text-[#E87474]"
                                                             }`}
                                                     >
                                                         {transaction.status.charAt(0) + transaction.status.slice(1).toLowerCase()}

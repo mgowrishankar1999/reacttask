@@ -2,6 +2,7 @@ import './App.css';
 import Home from './components/home';
 import ActiveQrcode from './components/activeQrcode';
 import Profile from './components/profile'
+import ProfileMobile from './components/Mobileprofile'
 import History from './components/history';
 import Popup from './components/popup';
 import {
@@ -27,8 +28,8 @@ function App() {
         <Route path="/popup" element={<Popup />} />
 
         {/* mobile routes */}
-        <Route path="/bank" element={<MobileProfile />} />
-        <Route path="/banks" element={<MobileBank />} />
+        {/* <Route path="/profile" element={<ProfileMobile />} /> */}
+        <Route path="/bank" element={<MobileBank />} />
 
 
       </>

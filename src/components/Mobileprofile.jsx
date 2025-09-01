@@ -15,7 +15,7 @@ import Fingerprint from "../assets/fingerprint.png"
 import Toggle from "../assets/toggle.png"
 import SampleLlock from "../assets/samplelock.png"
 import Permission from "../assets/permissions.png"
-import Language from "../assets/languages.png"
+import LanguageMobile from "../assets/languages.png"
 import Privacy from "../assets/privacy.png"
 import Report from "../assets/report.png"
 import Help from "../assets/help.png"
@@ -177,7 +177,7 @@ const MobileProfile = () => {
                     </div>
 
                     <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
-                        <img className="h-6 w-6" src={Language} alt='Language' />
+                        <img className="h-6 w-6" src={LanguageMobile} alt='Language' />
                         <div className="flex flex-col ms-2 grow">
                             <p className="font-semibold text-[14px] text-[#252525]">Languages</p>
                             <p className=" text-[#999999] text-[12px] font-medium ">Choose language: English</p>
