@@ -6,9 +6,11 @@ import Copyiconmobile from "../assets/copyiconmobile.png"
 import Eyeoff from "../assets/eye-off.png"
 import Cardaddnew from "../assets/cardaddnewicon.png"
 import Footer from "./MobileFooter";
+import { useNavigate } from 'react-router-dom';
 
 const MobileBank = () => {
     const [active, setActive] = useState("Cards");
+    const navigate = useNavigate();
 
     return (
         <>
@@ -16,7 +18,13 @@ const MobileBank = () => {
                 <div className="h-[22px]"></div>
                 <div className="h-[72px] w-full">
                     <div className="w-1/2 flex justify-between items-center m-4">
-                        <img className="cursor-pointer" src={Backicon} alt="Back" />
+                        {/* <img className="cursor-pointer" src={Backicon} alt="Back" /> */}
+                        <img
+                            src={Backicon}
+                            alt="Navigate to home"
+                            onClick={() => navigate('/')}
+                            style={{ cursor: 'pointer' }}
+                        />
                         <p className="font-semibold text-[20px] text-[#252525]">Bank</p>
                     </div>
                     <div className="flex justify-between items-center ">

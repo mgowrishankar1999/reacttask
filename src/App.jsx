@@ -2,7 +2,7 @@ import './App.css';
 import Home from './components/home';
 import ActiveQrcode from './components/activeQrcode';
 import Profile from './components/profile'
-import ProfileMobile from './components/Mobileprofile'
+// import ProfileMobile from './components/Mobileprofile'
 import History from './components/history';
 import Popup from './components/popup';
 import {
@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 
 // mobileimport 
-import MobileProfile from "./components/Mobileprofile"
+// import MobileProfile from "./components/Mobileprofile"
 import MobileBank from "./components/mobilebank"
 
 function App() {

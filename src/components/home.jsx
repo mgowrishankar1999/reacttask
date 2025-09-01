@@ -616,7 +616,7 @@ const Home = () => {
                 <Navbar />
                 <div
                     style={{ background: 'radial-gradient(circle, #61CE70, #42794A)' }}
-                    className="m-[16px] h-[206px] rounded-[16px]"
+                    className="m-[16px] mt-8 h-[206px] rounded-[16px]"
                 >
                     <div className="h-[52px] border-b border-white flex overflow-x-auto scrollbar-hidden" ref={scrollRef}>
                         {banks.map((bank, index) => (
