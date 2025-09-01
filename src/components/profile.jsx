@@ -336,20 +336,20 @@ const Profile = () => {
                         <img src={Uparrowmobile} />
                     </div>
 
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] px-2 h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={Fingerprint} alt='fingerprint' />
-                        <div className="flex flex-col ms-2 grow">
+                        <div className="flex flex-col ms-3 grow">
                             <p className="font-semibold text-[14px] text-[#252525]">Screen lock</p>
                             <p className=" text-[#999999] text-[12px] font-medium ">Biometric & Screen Locks</p>
 
                         </div>
                         <img className="w-6 h-[14px]" src={Toggle} alt='toggle' />
                     </div>
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] px-2 h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={SampleLlock} alt='fingerprint' />
-                        <div className="flex flex-col ms-2 grow">
-                            <p className="font-semibold text-[14px] text-[#252525]">Screen lock</p>
-                            <p className=" text-[#999999] text-[12px] font-medium ">Biometric & Screen Locks</p>
+                        <div className="flex flex-col ms-3 grow">
+                            <p className="font-semibold text-[14px] text-[#252525]">Change Password</p>
+                            <p className=" text-[#999999] text-[12px] font-medium ">Reset Your app password</p>
 
                         </div>
                         <img className="w-6 h-[14px]" src={Righticonmobile} alt='toggle' />
@@ -363,18 +363,18 @@ const Profile = () => {
                         <img src={Uparrowmobile} />
                     </div>
 
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] h-[58px] px-2 flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={LanguageMobile} alt='Language' />
-                        <div className="flex flex-col ms-2 grow">
+                        <div className="flex flex-col ms-3 grow">
                             <p className="font-semibold text-[14px] text-[#252525]">Languages</p>
                             <p className=" text-[#999999] text-[12px] font-medium ">Choose language: English</p>
 
                         </div>
                         <img className="w-6 h-[14px]" src={Righticonmobile} alt='toggle' />
                     </div>
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] h-[58px] px-2 flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={Permission} alt='Permission' />
-                        <div className="flex flex-col ms-2 grow">
+                        <div className="flex flex-col ms-3 grow">
                             <p className="font-semibold text-[14px] text-[#252525]"> Permissions</p>
                             <p className=" text-[#999999] text-[12px] font-medium "> Manage data sharing settings</p>
 
@@ -390,36 +390,36 @@ const Profile = () => {
                         <img src={Uparrowmobile} />
                     </div>
 
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] h-[58px] px-2 flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={Help} alt='Help' />
-                        <div className="flex flex-col ms-2 grow">
+                        <div className="flex flex-col ms-3 grow">
                             <p className="font-semibold text-[14px] text-[#252525]">Help</p>
                             <p className=" text-[#999999] text-[12px] font-medium ">Biometric & Screen Locks</p>
 
                         </div>
                         <img className="w-6 h-[14px]" src={Righticonmobile} alt='righticon' />
                     </div>
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] h-[58px] px-2 flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={Report} alt='Report' />
-                        <div className="flex flex-col ms-2 grow">
+                        <div className="flex flex-col ms-3 grow">
                             <p className="font-semibold text-[14px] text-[#252525]"> Report fraud</p>
                             <p className=" text-[#999999] text-[12px] font-medium ">Reset your app password</p>
 
                         </div>
                         <img className="w-6 h-[14px]" src={Righticonmobile} alt='toggle' />
                     </div>
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] h-[58px] px-2 flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={Privacy} alt='Privacy' />
-                        <div className="flex flex-col ms-2 grow">
+                        <div className="flex flex-col ms-3 grow">
                             <p className="font-semibold text-[14px] text-[#252525]">  Privacy policy</p>
                             <p className=" text-[#999999] text-[12px] font-medium ">Reset your app password</p>
 
                         </div>
                         <img className="w-6 h-[14px]" src={Righticonmobile} alt='toggle' />
                     </div>
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] h-[58px] px-2 flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <img className="h-6 w-6" src={About} alt='About' />
-                        <div className="flex flex-col ms-2 grow">
+                        <div className="flex flex-col ms-3 grow">
                             <p className="font-semibold text-[14px] text-[#252525]"> About us</p>
                             <p className=" text-[#999999] text-[12px] font-medium "> Reset your app password</p>
 
@@ -429,10 +429,10 @@ const Profile = () => {
 
                 </div>
 
-                <div className="min-h-[80px] m-4 rounded-[16px] border border-gray-300 ">
+                <div className="min-h-[80px] m-4 rounded-[16px]  border border-gray-300 ">
 
 
-                    <div className="mx-[16px] my-[8px] h-[58px] flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
+                    <div className="mx-[16px] my-[8px] h-[58px]  flex items-center rounded-[12px] shadow-md shadow-blue-100  ">
                         <button className="h-[48px] bg-[#E87474] rounded-[12px] w-full flex justify-center items-center text-[14px] font-semibold text-[#FFFFFF]">
                             <img className="mr-[8px]" src={Logout} />
                             Logout
